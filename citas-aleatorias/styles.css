@@ -1,0 +1,72 @@
+/* Estilos Generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: url(imagenes/biblioteca.jpg) no-repeat center center/ cover;
+}
+
+.contenido-centrado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor */
+
+.contenedor {
+  width: 80vw;
+  max-width: 600px;
+  height: 500px;
+  padding: 20px;
+  background-color: white;
+}
+
+.contenedor-interno {
+  width: 80%;
+}
+
+/* Contenido */
+
+#titulo {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#cita {
+  font-size: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  font-family: 'Courgette', cursive;
+}
+
+#autor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+#boton-cambiar-cita {
+  width: 120px;
+  height: 50px;
+  font-size: 20px;
+}
