@@ -1,0 +1,53 @@
+/* Estilos Generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #2B807B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenedor y Color */
+
+#contenedor {
+  height: 220px;
+  width: 450px;
+  background-color: white;
+  border: 5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#color {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+button {
+  color: white;
+  border-radius: 20px;
+  margin: 15px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 30px;
+  border: 3px solid #008CBA;
+  background-color: #008CBA;
+  user-select: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #05455a;
+}
