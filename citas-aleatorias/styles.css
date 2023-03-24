@@ -28,9 +28,11 @@ body {
 .contenedor {
   width: 80vw;
   max-width: 600px;
-  height: 500px;
+  min-height: 500px;
   padding: 20px;
   background-color: white;
+  border: 5px solid black;
+  border-radius: 30px;
 }
 
 .contenedor-interno {
@@ -43,30 +45,31 @@ body {
   width: 100%;
   font-weight: bold;
   text-align: center;
+  font-family: 'Courgette', cursive;
 }
 
 #cita {
-  font-size: 30px;
+  font-size: 32px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 10px;
-  font-family: 'Courgette', cursive;
 }
 
 #autor {
   width: 100%;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  font-size: 20px;
+  font-family: 'Courgette', cursive;
 }
 
 #boton-cambiar-cita {
-  width: 120px;
+  width: 180px;
   height: 50px;
   font-size: 20px;
 }
