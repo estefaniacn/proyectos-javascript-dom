@@ -1,33 +1,18 @@
-/* Estilos Generales */
+/* Estilos generales */
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
 body {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   text-align: center;
   background: url(imagenes/fondo.jpg) no-repeat center center/ cover;
-}
-
-/* Acordion */
-
-#acordion {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  width: 80vw;
-  max-width: 600px;
-  background-color: white;
-  border: 4px solid black;
 }
 
 /* Titulo principal */
@@ -36,47 +21,65 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   margin: 20px 0;
+  padding: 0 10px;
+}
+
+/* Acordion */
+
+#acordion {
+  width: 90vw;
+  min-height: 80vh;
+  max-width: 700px;
+  background-color: white;
+  border: 4px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-principal {
+  width: 100%;
 }
 
 /* Especie */
 
-.contenedor.activo .especie {
-  background-color: #0e6116;
-}
-
 .especie {
+  width: 100%;
+  height: 80px;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   background-color: #342727;
-  height: 80px;
 }
 
 .especie span {
   font-style: italic;
+  display: contents;
 }
 
 /* Descripcion */
 
-.contenedor .descripcion {
+.descripcion {
+  width: 100%;
+  height: 0px;
+  font-size: 18px;
+  margin: 10px;
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 10px;
-  font-size: 18px;
   line-height: 1.5;
-  width: 100%;
-  height: 0px;
+  max-width: 600px;
   overflow: hidden;
   transition: 1s all;
-  text-align: left;
 }
 
-.contenedor .descripcion img {
+.descripcion img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -84,14 +87,31 @@ h1 {
   object-fit: cover;
 }
 
-.contenedor .descripcion a {
+.descripcion p {
+  width: 100%;
+}
+
+.descripcion a {
   display: block;
   text-align: center;
   margin: 20px 10px;
 }
 
+/* Activos */
+
+.contenedor.activo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor.activo .especie {
+  background-color: #0e6116;
+}
+
 .contenedor.activo .descripcion {
-  height: 400px;
-  padding: 20px;
-  overflow: scroll;
+  height: 300px;
+  margin: 20px;
+  overflow-y: scroll;
 }
