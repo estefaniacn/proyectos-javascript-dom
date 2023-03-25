@@ -33,7 +33,7 @@ let citas = [
   },
   {
     'autor': 'John Muir',
-    'texto': 'El poder de la imaginación nos hace infinitos'
+    'texto': 'El poder de la imaginación nos hace infinitos.'
   },
   {
     'autor': 'Mark Twain',
