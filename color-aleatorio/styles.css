@@ -1,53 +1,56 @@
-/* Estilos Generales */
+/* > Estilos Generales */
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 body {
+  height: 100vh;
   background-color: #2B807B;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
-/* Contenedor y Color */
+.centrar-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* > Contenedor */
 
 #contenedor {
   height: 220px;
   width: 450px;
   background-color: white;
   border: 5px solid black;
-  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
+/* > Texto */
+
 #color {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
 }
 
+/* > Boton */
+
 button {
+  font-size: 30px;
   color: white;
   border-radius: 20px;
+  background-color: #008CBA;
   margin: 15px;
   padding: 10px 30px;
-  border: none;
-  font-size: 30px;
   border: 3px solid #008CBA;
-  background-color: #008CBA;
   user-select: none;
   cursor: pointer;
   transition-duration: 0.4s;
 }
 
 button:hover {
-  background-color: #05455a;
+  background-color: #05455A;
 }
