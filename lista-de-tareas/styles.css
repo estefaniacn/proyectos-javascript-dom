@@ -63,6 +63,7 @@ button {
   border-radius: 20px;
   border: 0px solid black;
   cursor: pointer;
+  user-select: none;
 }
 
 /* Lista de tareas */
