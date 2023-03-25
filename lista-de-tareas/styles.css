@@ -58,7 +58,7 @@ button {
   height: 60px;
   padding: 10px;
   color: white;
-  background-color: #133750;
+  background-color: #1312a8;
   font-size: 22px;
   border-radius: 20px;
   border: 0px solid black;
@@ -82,7 +82,7 @@ button {
   padding: 10px;
   margin-top: 10px;
   color: white;
-  background-color: black;
+  background-color: #407ba6;
   border: 2px solid black;
   border-radius: 10px;
   display: flex;
@@ -95,6 +95,8 @@ button {
 
 .tarea.completada {
   text-decoration: line-through;
+  background-color: black;
+  border: none;
 }
 
 .tarea p {

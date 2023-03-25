@@ -25,7 +25,7 @@ function agregarTarea() {
   
     // Crear y agregar iconos.
     let completar = document.createElement('i');
-    completar.classList.add('bi', 'bi-check2-square', 'icono-completar');
+    completar.classList.add('bi', 'bi-check-circle-fill', 'icono-completar');
     completar.addEventListener('click', completarTarea);
   
     let eliminar = document.createElement('i');
