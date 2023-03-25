@@ -1,13 +1,6 @@
 // Seleccionar los elementos del DOM.
-const boton = document.getElementById('boton-color');
+const boton = document.querySelector('button');
 const color = document.getElementById('color');
-
-// Event Listener.
-boton.addEventListener('click', function() {
-  let colorAleatorio = generarColorHexAleatorio();
-  document.body.style.backgroundColor = colorAleatorio;
-  color.textContent = colorAleatorio;
-});
 
 // Generar un color hexadecimal aleatorio.
 function generarColorHexAleatorio() {
@@ -15,9 +8,18 @@ function generarColorHexAleatorio() {
   let color = '#'; // El color inicia con #.
 
   for (let i = 0; i < 6; i++) {
+    // Escoger uno de los 16 digitos posibles.
     let indiceAleatorio = Math.floor(Math.random() * 16);
+    // Agregarlo al codigo del color.
     color += digitos[indiceAleatorio];
   }
   
   return color;
 }
+
+// Event Listener.
+boton.addEventListener('click', function() {
+  let colorAleatorio = generarColorHexAleatorio();
+  document.body.style.backgroundColor = colorAleatorio;
+  color.textContent = colorAleatorio;
+});
