@@ -54,10 +54,10 @@ ul {
   margin: 15px 0;
 }
 
-.topping:nth-child(2n) {
-  background-color: #ff7b0f;
+.fondo-marron {
+  background-color: #aa5822;
 }
 
-.topping:nth-child(2n + 1) {
-  background-color: #aa5822;
+.fondo-naranja {
+  background-color: #ff7b0f;
 }
