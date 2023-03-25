@@ -1,46 +1,48 @@
-/* Estilos Generales */
+/* Estilos generales */
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
 }
 
 body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
   background: url(imagenes/madera.jpg) no-repeat center center/ cover;
 }
 
-/* Contenedor */
+/* Contenedores */
 
-.contenedor {
+.contenedor-principal {
+  width: 80vw;
+  max-width: 600px;
+  min-height: 350px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 80vw;
-  max-width: 600px;
-  min-height: 350px;
   background-color: white;
-}
-
-#cronometro {
-  font-size: 80px;
-  font-weight: bold;
-  width: 100%;
-  padding: 20px;
-  font-family: 'Noto Sans Thai', sans-serif;
-  user-select: none;
 }
 
 .contenedor-botones {
   padding: 20px;
 }
+
+/* Cronometro */
+
+#cronometro {
+  width: 100%;
+  font-size: 80px;
+  font-weight: bold;
+  padding: 20px;
+  user-select: none;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+/* Botones */
 
 .boton {
   width: 80px;

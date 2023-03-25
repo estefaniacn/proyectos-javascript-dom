@@ -1,4 +1,4 @@
-// Obtener referencias a los botones.
+// Seleccionar los botones.
 const botonInicioPausa = document.querySelector('#boton-inicio-pausa');
 const botonReiniciar = document.querySelector('#boton-reiniciar');
 
@@ -7,12 +7,12 @@ let [segundos, minutos, horas] = [0, 0, 0];
 
 // Variables para almacenar el intervalo de tiempo que debe
 // transcurrir para actualizar el cronometro y el estado 
-// del cronómetro.
+// del cronometro.
 let intervaloDeTiempo;
 let estadoCronometro = 'pausado'; // Dos estados posibles: 'pausado' o 'andando'.
 
 // Actualizar el cronometro.
-function cronometro() {
+function actualizarCronometro() {
   segundos++;
 
   if (segundos / 60 === 1) {
@@ -40,12 +40,12 @@ function asignarFormato(unidadDeTiempo) {
   return unidadDeTiempo < 10 ? '0' + unidadDeTiempo : unidadDeTiempo;
 }
 
-botonInicioPausa.addEventListener('click', function () {
+botonInicioPausa.addEventListener('click', function() {
   if (estadoCronometro === 'pausado') {
     // LLamar a la funcion cronometro cada 1000 milisegundos.
-    intervaloDeTiempo = window.setInterval(cronometro, 1000);
-    // Si esta pausado, se muestra la flecha >
-    // y se debe cambiar a || porque va a comenzar a andar.
+    intervaloDeTiempo = window.setInterval(actualizarCronometro, 1000);
+    // Si el cronometro esta pausado, se muestra la flecha >
+    // y se debe cambiar a || porque va a iniciar.
     document.getElementById('boton-inicio-pausa').innerHTML = `<i class="bi bi-pause" id="boton-inicio-pausa"></i>`;
     botonInicioPausa.classList.remove('iniciar');
     botonInicioPausa.classList.add('pausar');
@@ -53,7 +53,7 @@ botonInicioPausa.addEventListener('click', function () {
     estadoCronometro = 'andando';
   } else {
     // Detener el cronometro al eliminar el intervalo de tiempo 
-    // usado para llamar a la funcion cronometro.
+    // usado para llamar a la funcion actualizarCronometro().
     window.clearInterval(intervaloDeTiempo);
     // Actualizar los botones y el estado del cronometro.
     document.getElementById('boton-inicio-pausa').innerHTML = `<i class="bi bi-play-fill" id="boton-inicio-pausa"></i>`;
@@ -66,8 +66,8 @@ botonInicioPausa.addEventListener('click', function () {
 // Reiniciar el cronometro eliminando el intervalo de tiempo,
 // reiniciando los segundos, minutos y horas, y actualizando
 // el estado del cronometro y de los botones.
-botonReiniciar.addEventListener('click', function () {
-  // Intervalo.
+botonReiniciar.addEventListener('click', function() {
+  // Eliminar el intervalo.
   window.clearInterval(intervaloDeTiempo);
 
   // Segundos, minutos y horas.
@@ -80,5 +80,7 @@ botonReiniciar.addEventListener('click', function () {
   document.getElementById('boton-inicio-pausa').innerHTML = `<i class="bi bi-play-fill" id="inicio"></i>`;
   botonInicioPausa.classList.remove('pausar');
   botonInicioPausa.classList.add('iniciar');
+
+  // Estado.
   estadoCronometro = 'pausado';
 });
