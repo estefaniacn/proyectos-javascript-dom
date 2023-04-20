@@ -4,6 +4,11 @@ const boton = document.querySelector('button');
 const listaDeTareas = document.getElementById('lista-de-tareas');
 
 boton.addEventListener('click', agregarTarea);
+input.addEventListener('keydown', (e) => {
+  if (e.key == 'Enter') {
+    agregarTarea();
+  }
+});
 
 // Crear y agreagar una tarea a la lista de tareas
 // en el DOM.
