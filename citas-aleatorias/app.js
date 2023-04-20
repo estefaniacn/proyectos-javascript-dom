@@ -25,3 +25,8 @@ cambiarCita();
 
 // Para cambiar la cita al hacer click en el boton.
 botonElem.addEventListener('click', cambiarCita);
+botonElem.addEventListener('keydown', (e) => {
+  if (e.key == 'Enter') {
+    cambiarCita();
+  }
+});
